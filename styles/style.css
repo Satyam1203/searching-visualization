@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 header {
@@ -27,11 +27,11 @@ header {
   top: 0;
   height: 80px;
   width: 100%;
-  background-color: #535C68;
+  background-color: #535c68;
 }
 
 header .title {
-  color: #FFF;
+  color: #fff;
   font-size: 28px;
   text-decoration: none;
 }
@@ -51,7 +51,7 @@ header .title {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100px;
+    height: 120px;
   }
 }
 
@@ -102,7 +102,7 @@ header .title {
 
 @media screen and (max-width: 768px) {
   .container .controls {
-    top: 100px;
+    top: 120px;
   }
   .container .controls input {
     width: 125px;
@@ -137,6 +137,53 @@ header .title {
           box-shadow: 1px 2px 3px darkgray;
 }
 
+@media screen and (max-width: 768px) {
+  .container .array {
+    width: 100%;
+    margin-top: 18vh;
+    height: 65vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 0;
+  }
+  .container .array .item {
+    margin: 10px auto;
+    min-width: 60px;
+  }
+  .container .array ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.container .status {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: #444;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .container .status {
+    bottom: 30px;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #aaa;
+  padding: 2px 0;
+}
+
 .btn {
   position: relative;
   cursor: pointer;
@@ -156,7 +203,7 @@ header .title {
 }
 
 .btn:nth-child(2) {
-  background-color: #CDDCDC;
+  background-color: #cddcdc;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#bdc2e8), color-stop(1%, #bdc2e8), to(#e6dee9));
   background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
   color: #333;
@@ -167,7 +214,7 @@ header .title {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: #EEE;
+  background-color: #eee;
   -webkit-animation: ripple 0.5s linear;
           animation: ripple 0.5s linear;
   pointer-events: none;
@@ -198,5 +245,23 @@ header .title {
     height: 300px;
     opacity: 0;
   }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #535c68;
 }
 /*# sourceMappingURL=style.css.map */
