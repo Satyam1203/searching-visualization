@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Searching Visualizer</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <a class="title" href="#">Searching Visualizer</a>
+      <button class="btn" onclick="generateArray()">Generate Array</button>
+    </header>
     <div class="container">
-        <button onclick="generateArray()">Generate Array</button>
-        <input id="key" placeholder="Enter element to search" />
-        <button onclick="binarySearch()">Search</button>
-        <div class="array">
-
-        </div>
+      <div class="controls">
+        <input id="key" placeholder="Enter Search Key" />
+        <select id="option">
+          <option value="0">Linear Search</option>
+          <option value="1">Binary Search</option>
+        </select>
+        <button class="btn" onclick="search()">Search</button>
+      </div>
+      <div class="array">
+        <div class="item">12</div>
+        <div class="item">12</div>
+        <div class="item">12</div>
+        <div class="item">12</div>
+        <div class="item">12</div>
+        <div class="item">12</div>
+        <div class="item">12</div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+    <script src="ripple.js"></script>
+  </body>
 </html>

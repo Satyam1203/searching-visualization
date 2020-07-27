@@ -2,15 +2,32 @@ console.log("Script connected");
 const array = document.querySelector(".array");
 let n = 10;
 
+// Generate array of random numbers from 1 to 100
 const generateArray = () => {
   let n = 10;
   array.innerHTML = "";
   for (let i = 0; i < n; i++) {
     const el = document.createElement("div");
     el.classList.add("item");
-    el.innerHTML = Math.ceil(Math.random() * 50);
+    el.innerHTML = Math.ceil(Math.random() * 100);
     array.appendChild(el);
   }
+};
+
+// Decides which search algorithm should be called, based on user's choice
+const search = () => {
+  const option = document.getElementById("option").value;
+  if (option === "0") linearSearch();
+  else binarySearch();
+};
+
+// wait funcion
+const wait = async (t) => {
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("done!"), 1500 / n);
+  });
+
+  let result = await promise;
 };
 
 const linearSearch = () => {
@@ -24,6 +41,7 @@ const linearSearch = () => {
     if (parseInt(items[i].innerHTML) === parseInt(key)) {
       console.log("Found at index " + i);
       found = true;
+      break;
     }
   }
   if (found === false) {
