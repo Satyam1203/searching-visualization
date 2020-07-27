@@ -1,4 +1,4 @@
-$color : rgb(212, 233, 251);
+$color : rgb(224, 236, 245);
 
 @mixin flexCenter {
     display: flex;
@@ -78,8 +78,9 @@ header {
 
     .array {
         display: flex;
-        // overflow-x: scroll;
-        // scrollbar-width: thin;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scrollbar-width: thin;
 
         .item {
             border: 1px solid salmon;
@@ -148,3 +149,7 @@ header {
         opacity: 0;
     }
 }
+
+// ::-webkit-scrollbar{
+
+// }

@@ -13,22 +13,15 @@
     </header>
     <div class="container">
       <div class="controls">
-        <input id="key" placeholder="Enter Search Key" />
+        <input id="key" placeholder="Enter Search Key" inputmode="numeric" />
         <select id="option">
           <option value="0">Linear Search</option>
           <option value="1">Binary Search</option>
         </select>
-        <button class="btn" onclick="search()">Search</button>
+        <button id="search-btn" class="btn" onclick="search()">Search</button>
       </div>
-      <div class="array">
-        <div class="item">12</div>
-        <div class="item">12</div>
-        <div class="item">12</div>
-        <div class="item">12</div>
-        <div class="item">12</div>
-        <div class="item">12</div>
-        <div class="item">12</div>
-      </div>
+      <div class="array"></div>
+      <div class="status"></div>
     </div>
     <script src="script.js"></script>
     <script src="ripple.js"></script>
